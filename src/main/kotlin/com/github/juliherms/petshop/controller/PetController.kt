@@ -15,9 +15,6 @@ class PetController(
     private val service:PetService
 ) {
 
-    /**
-     * List all pets from user
-     */
     @GetMapping("/{id}")
     fun findById(@PathVariable id: Long) : PetDTO {
         return service.findById(id)
